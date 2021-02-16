@@ -18,6 +18,7 @@
         },
         mounted: function() {
             this.load_telefoni();
+            //Testiranje gita
         }
     }
 </script>
