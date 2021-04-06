@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/edit">NoviTelefon</router-link>
+
     </div>
     <router-view/>
   </div>
@@ -14,10 +13,11 @@
     export default {
         name: "App",
         methods: {
-            ...mapActions(['load_telefoni'])
+            ...mapActions(['load_telefoni','load_tableti'])
         },
         mounted: function() {
             this.load_telefoni();
+            this.load_tableti();
             //Testiranje gita
         }
     }

@@ -8,7 +8,7 @@
                 head-variant="light"
                 @row-clicked="editTelefon">
             <template v-slot:cell(delete)="row">
-                <b-button variant="danger" @click="delete_telefon(row.item.id)">Delete</b-button>
+                <b-button v-if="admin == false" variant="danger" @click="delete_telefon(row.item.id)">Delete</b-button>
             </template>
         </b-table>
         <h1 v-else>No messages</h1>
@@ -22,7 +22,7 @@
     export default {
         name: "TelefonList",
         computed: {
-            ...mapState(['telefoni'])
+            ...mapState(['telefoni', 'admin'])
         },
         data() {
             return {
